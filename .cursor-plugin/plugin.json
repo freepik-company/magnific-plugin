@@ -1,0 +1,36 @@
+{
+  "name": "magnific",
+  "displayName": "Magnific",
+  "version": "1.3.0",
+  "description": "Turn ideas, product photos, scripts, and reference images into complete visual campaigns with Magnific.",
+  "author": {
+    "name": "Magnific AI, S.L.U."
+  },
+  "homepage": "https://docs.magnific.com/modelcontextprotocol",
+  "repository": "https://github.com/freepik-company/magnific-plugin",
+  "license": "MIT",
+  "logo": "assets/magnific-icon.png",
+  "keywords": [
+    "magnific",
+    "ai-video",
+    "ai-image",
+    "ai-ads",
+    "ugc",
+    "marketing",
+    "campaigns",
+    "mcp"
+  ],
+  "category": "integrations",
+  "tags": [
+    "marketing",
+    "video",
+    "image",
+    "audio",
+    "advertising",
+    "filmmaking",
+    "design"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.cursor-plugin/mcp.json",
+  "commands": "./commands/"
+}

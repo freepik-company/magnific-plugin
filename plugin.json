@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "magnific",
+  "version": "1.3.0",
+  "description": "Turn ideas, product photos, scripts, and reference images into complete visual campaigns with Magnific.",
+  "author": {
+    "name": "Magnific AI, S.L.U.",
+    "url": "https://www.magnific.com/app"
+  },
+  "homepage": "https://docs.magnific.com/modelcontextprotocol",
+  "repository": "https://github.com/freepik-company/magnific-plugin",
+  "license": "MIT",
+  "keywords": [
+    "magnific",
+    "ai-video",
+    "ai-image",
+    "ai-ads",
+    "ugc",
+    "marketing",
+    "campaigns",
+    "mcp"
+  ]
+}

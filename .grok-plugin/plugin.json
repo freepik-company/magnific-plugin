@@ -1,0 +1,23 @@
+{
+  "name": "magnific",
+  "version": "1.3.0",
+  "description": "Turn ideas, product photos, scripts, and reference images into complete visual campaigns with Magnific: the hosted Magnific MCP server plus production skills, with OAuth sign-in through your Magnific account.",
+  "author": {
+    "name": "Magnific AI, S.L.U.",
+    "url": "https://www.magnific.com/app"
+  },
+  "homepage": "https://docs.magnific.com/modelcontextprotocol",
+  "repository": "https://github.com/freepik-company/magnific-plugin",
+  "license": "MIT",
+  "keywords": [
+    "magnific",
+    "magnific mcp",
+    "ai-video",
+    "ai-image",
+    "ai-ads",
+    "ugc",
+    "marketing",
+    "campaigns"
+  ],
+  "logo": "assets/magnific-icon.png"
+}

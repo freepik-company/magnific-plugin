@@ -1,0 +1,42 @@
+{
+  "name": "magnific",
+  "version": "1.3.0",
+  "description": "Turn ideas, product photos, scripts, and reference images into complete visual campaigns with Magnific.\n\nCreate AI images, AI videos, advertisements, branded content, and web experiences through natural conversation. Explore different creative directions, refine the results, and keep your product, presenter, and visual identity consistent across every asset.\n\nWith Magnific, you can:\n\n• Generate product imagery, campaign visuals, illustrations, social graphics, thumbnails, and videos from text or reference material.\n• Create UGC product demonstrations, reviews, tutorials, unboxings, fashion try-ons, testimonials, and conversion-focused website videos.\n• Produce content with a consistent AI host, or build faceless videos using scripts, narration, supporting visuals, motion graphics, and synchronized subtitles.\n• Use Ad Multiplier to turn one advertisement into targeted variations with different hooks, audiences, offers, languages, durations, and calls to action.\n• Transform static content with Motion Craft, including camera movement, animated typography, transitions, visual effects, branded layouts, and platform-specific formatting.\n• Write YouTube videos, advertisements, explainers, and social scripts. Generate narration, subtitles, thumbnails, covers, scene plans, and alternative versions for each channel.\n• Edit existing footage by changing its structure, pacing, framing, graphics, captions, or creative direction.\n• Build and publish landing pages, product websites, web apps, interactive experiences, and browser games, then continue improving them through chat.\n\nMagnific includes specialized workflows for Ad Multiplier, AI Host Video, Faceless Video, Creative Presets, Motion Craft, Narrator, Subtitles, Thumbnail Generation, UGC videos, Video Editing, Website Builder, and YouTube Script.\n\nStart with one asset and expand it into a coordinated campaign - from product visuals and social videos to ad variations, scripts, thumbnails, and a live website.",
+  "author": {
+    "name": "Magnific AI, S.L.U."
+  },
+  "homepage": "https://docs.magnific.com/modelcontextprotocol",
+  "repository": "https://github.com/freepik-company/magnific-plugin",
+  "license": "MIT",
+  "keywords": [
+    "magnific",
+    "ai-video",
+    "ai-image",
+    "ai-ads",
+    "ugc",
+    "marketing",
+    "campaigns",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "capabilities": [],
+    "category": "Creativity",
+    "defaultPrompt": [
+      "Create a launch video for my new luxury perfume.",
+      "Take this poster and run my localization Flow.",
+      "Generate 5 social posts for our sneaker drop. On brand."
+    ],
+    "developerName": "Magnific AI, S.L.U.",
+    "displayName": "Magnific",
+    "longDescription": "Turn ideas, product photos, scripts, and reference images into complete visual campaigns with Magnific.\n\nCreate AI images, AI videos, advertisements, branded content, and web experiences through natural conversation. Explore different creative directions, refine the results, and keep your product, presenter, and visual identity consistent across every asset.\n\nWith Magnific, you can:\n\n• Generate product imagery, campaign visuals, illustrations, social graphics, thumbnails, and videos from text or reference material.\n• Create UGC product demonstrations, reviews, tutorials, unboxings, fashion try-ons, testimonials, and conversion-focused website videos.\n• Produce content with a consistent AI host, or build faceless videos using scripts, narration, supporting visuals, motion graphics, and synchronized subtitles.\n• Use Ad Multiplier to turn one advertisement into targeted variations with different hooks, audiences, offers, languages, durations, and calls to action.\n• Transform static content with Motion Craft, including camera movement, animated typography, transitions, visual effects, branded layouts, and platform-specific formatting.\n• Write YouTube videos, advertisements, explainers, and social scripts. Generate narration, subtitles, thumbnails, covers, scene plans, and alternative versions for each channel.\n• Edit existing footage by changing its structure, pacing, framing, graphics, captions, or creative direction.\n• Build and publish landing pages, product websites, web apps, interactive experiences, and browser games, then continue improving them through chat.\n\nMagnific includes specialized workflows for Ad Multiplier, AI Host Video, Faceless Video, Creative Presets, Motion Craft, Narrator, Subtitles, Thumbnail Generation, UGC videos, Video Editing, Website Builder, and YouTube Script.\n\nStart with one asset and expand it into a coordinated campaign - from product visuals and social videos to ad variations, scripts, thumbnails, and a live website.",
+    "privacyPolicyURL": "https://www.magnific.com/legal/privacy",
+    "shortDescription": "Create images, video and audio",
+    "supportURL": "https://www.magnific.com/ai/support",
+    "termsOfServiceURL": "https://www.magnific.com/legal/terms-of-use",
+    "websiteURL": "https://www.magnific.com/app",
+    "logo": "./assets/magnific-icon.png",
+    "composerIcon": "./assets/magnific-icon.png"
+  }
+}

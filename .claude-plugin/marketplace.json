@@ -1,0 +1,24 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "magnific",
+  "description": "Turn ideas, product photos, scripts, and reference images into complete visual campaigns with Magnific.",
+  "owner": {
+    "name": "Magnific AI, S.L.U."
+  },
+  "plugins": [
+    {
+      "name": "magnific",
+      "source": "./",
+      "description": "Turn ideas, product photos, scripts, and reference images into complete visual campaigns with Magnific.",
+      "category": "design",
+      "tags": [
+        "magnific",
+        "video",
+        "image",
+        "filmmaking",
+        "marketing",
+        "mcp"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "magnific",
+  "version": "1.3.0",
+  "description": "Turn ideas, product photos, scripts, and reference images into complete visual campaigns with Magnific.",
+  "mcpServers": {
+    "magnific": {
+      "httpUrl": "https://mcp.magnific.com/mcp"
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}
