@@ -44,6 +44,8 @@ Two craft references are shared by all skills: `skills/magnific-essentials/refer
 To try the plugin in Cursor from a local copy, copy this folder to `~/.cursor/plugins/local/magnific` and run **Developer: Reload Window**.
 To try it in Grok Build from a local copy, run `grok plugin marketplace add "$PWD"` inside this folder, then `grok plugin install magnific --trust`.
 
+For the proposed Kimi Code adapter and its pending runtime checks, see [KIMI.md](KIMI.md). Custom installation does not imply a listing in Kimi's Curated catalog.
+
 ## The command
 
 `/magnific <request>` is one entry point for any Magnific job, for example `/magnific Animate this product shot with a slow push-in, 5 seconds, 9:16`.
