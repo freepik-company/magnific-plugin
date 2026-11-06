@@ -40,14 +40,17 @@ Pick one of these wirings per shot:
 Seedance 2.x and MiniMax H3 cannot take a start frame and visual references in the same call, so never send both there.
 Inside any move that turns the product, add a guard: "during the move the label, cap and proportions stay exactly as in the product reference."
 
-## 4. Draft, then render the finals
+## 4. Choose quality, then render
 
 - Price the plan with `simulate_cost` (one shot, times the number of shots) and compare it with the budget before anything else.
-- Draft motion and timing cheaply first when the brief is new: MiniMax H3 Max Turbo or Seedance 2.0 Fast at 480p or 720p, or Kling 2.5. Show the drafts; when nobody can review them, check them yourself (`video_extract_frames` is free) for product drift, framing and broken motion before paying for finals.
-- Render finals on the top catalog model at the delivery resolution only for shots whose motion is approved. Seedance 2.5 at 720p is enough for most social placements; 1080p costs much more and is for broadcast, hero or client-final masters.
-- Reels, TikTok and Shorts upload at 1080 x 1920. When a cheaper route reaches 1080p at the quality the shot needs (price both with `simulate_cost`: for product and scenery shots, a cheaper model at 1080p often costs less than the top model at 720p), prefer it to a 720p master; when only the top model will do (real-looking people talking on camera), 720p on that model beats 1080p on a weaker one.
-- Seedance 2.5 `Draft` resolution previews the exact take cheaply, and `video_finalize_draft` renders that same take at 1080p (billed like a 1080p render). It pays off only when the client reviews drafts before finals; for a 720p social deliverable, or when nobody will review, render the final directly.
-- Keep a fix in reserve: with a budget, plan finals that leave room to re-render the worst shot. When the top model's finals would take most of the budget, use a cheaper final route that meets the placement (for example Kling 3.0 at 1080p) or check cheap drafts first.
+- Follow `magnific-essentials` for model and resolution priority, explicit choices and capability fallbacks.
+  Default to available, compatible Seedance 2.5 at 1080p, including Reels, TikTok and Shorts.
+  A social placement or a new brief alone does not justify a cheaper model or lower resolution.
+- Use cheaper models or lower resolution when the user requests a budget, speed, drafts or previews.
+  For a draft workflow, choose a compatible recommended model from the live catalog and review motion and product fidelity before paying for finals.
+- Seedance 2.5 `Draft` previews the exact take; `video_finalize_draft` renders that take at 1080p, billed like a 1080p render.
+  Draft plus finalize costs more than a direct final. Use it when someone will review drafts before selecting finals.
+- With a budget, leave room to fix the worst shot. Compare live quotes for compatible alternatives if the default exceeds that budget.
 - With a budget, run drafts and finals inside it without stopping. Without one, follow the spend rule in `magnific-essentials`: quote the plan and wait for a yes before spending more than about 200 credits.
 - Start at most a few video jobs at a time; the account has a concurrency cap, and a rejected call tells you how long to wait. Never fire the same paid call twice; wait for the first.
 
