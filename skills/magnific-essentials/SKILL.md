@@ -1,6 +1,6 @@
 ---
 name: magnific-essentials
-description: Operating rules for every Magnific MCP job - pricing with simulate_cost, drafting cheap before expensive finals, picking models from the live catalog, uploading the user's files, saving into the right project, waiting for async results without duplicate paid calls, and delivering editor-ready files. Read it before the first Magnific generation or edit in a conversation, and whenever a Magnific job spends real money, uploads files, runs several jobs, or ends in files for Premiere, Resolve, After Effects, Photoshop or Figma.
+description: Operating rules for every Magnific MCP job - pricing with simulate_cost, choosing final or draft quality, picking models from the live catalog, uploading the user's files, saving into the right project, waiting for async results without duplicate paid calls, and delivering editor-ready files. Read it before the first Magnific generation or edit in a conversation, and whenever a Magnific job spends real money, uploads files, runs several jobs, or ends in files for Premiere, Resolve, After Effects, Photoshop or Figma.
 ---
 
 # Magnific essentials
@@ -17,22 +17,23 @@ These rules prevent all five, and every job skill builds on them.
 - Price every video call, and any other call or batch that could cost more than about 200 credits, with `simulate_cost`, passing the target `tool` and the exact `arguments` you will send.
   For a batch, price one item and multiply.
 - Video is where money goes: duration, resolution and the model multiply the price, and one top-model clip at 1080p can cost more than a hundred images. Never quote a price from memory; `simulate_cost` is the only source.
-- With a budget from the user, stay inside it and report spend against it.
-- Without one, choose the most cost-effective route that meets the deliverable's quality bar (720p is enough for most social video; 1080p and above is for broadcast, cinema and client masters).
-  Judge the cost on that cheapest adequate route, not on a pricier route you might prefer.
+- With a budget from the user, stay inside it and report spend against it, using the video selection rules in section 3.
+- Without a budget, use the video selection rules in section 3. For other media, choose the most cost-effective route that meets the deliverable's quality bar.
+  Price the selected route before applying the approval rules below.
   If the whole job costs about 200 credits or less, make the deliverable and report the cost.
   Above that, state the plan and its price, and wait for the user's yes before the first paid call; once they agree, run the plan without asking again, but stop and ask if it would go over the price they approved.
 - If you cannot ask (a scheduled routine, an unattended run), spend nothing unless the routine's own instructions give a budget, and then stay inside it. Without a budget, price the plan and report the quote instead of generating.
 - Report what the job cost in the final reply.
 
-## 2. Draft cheap, finish expensive
+## 2. Use drafts when requested
 
-Professionals approve direction on cheap drafts and only then pay for the hero render.
+Render the requested deliverable directly unless the user wants drafts, previews or an approved budget plan includes them.
 
 - Make one result per deliverable unless the user asks for options, or you will actually look at several candidates before choosing; paying for takes and picking one blind wastes the rest.
   A redo after a real review is part of the job: when a result fails its check, fix it (once, with the change named) rather than shipping it.
 - Images: explore with a fast model or `count` variants in one call when someone will choose among them, then finish the chosen one (a stronger model, `images_upscale`, or both).
-- Video: block motion and timing on a draft model or low resolution, then render only approved shots at the final resolution.
+- Video: use a draft model or lower resolution when the user requests drafts, previews, speed or lower cost.
+  Review drafts before paying for finals.
 - Seedance 2.5 offers a cheaper `Draft` resolution: `video_finalize_draft` turns that exact shot into its 1080p final (billed like a 1080p render), while a new `video_generate` would produce a different video.
   The finalize costs at least as much as a direct 1080p render and `simulate_cost` cannot quote it, so draft plus finalize always costs more than rendering the final directly.
   It pays off only when someone looks at the draft before finalizing and the shot is risky (complex motion, a face carrying the scene), or when several drafts compete and only the best is finalized; say the total up front.
@@ -44,6 +45,14 @@ Professionals approve direction on cheap drafts and only then pay for the hero r
 
 - Read `images_models_list` or `video_models_list` before choosing (use `onlyRecommended: true` or `search` to keep it short), unless the user named a model; then find that exact model with `search`.
 - Follow `agentRecommendation` (`tier`, `rank`, `useFor`, `summary`): Magnific maintains it, and it beats general knowledge about which model fits which job.
+- For generated video, honor an explicit model and resolution first.
+  Otherwise, prefer quality using the live catalog’s `agentRecommendation` and select a public model that supports the requested inputs and output.
+  Choose a supported resolution using that recommendation and the requested deliverable; do not assume a fixed model or resolution.
+  This quality priority includes social video, b-roll and inserts; those labels alone do not imply a budget or draft request.
+  Choose cheaper models or lower resolution for an explicit budget or speed priority, or when the user requests drafts or previews.
+  A spending cap without that priority keeps this quality route when its price fits. Compare cheaper alternatives only when the quality route exceeds the cap.
+  If the preferred model or resolution is unavailable or incompatible, choose the highest-ranked public recommendation that supports the job, and report the fallback.
+  Use only resolutions listed for the selected model. If an explicit user choice is unsupported, explain and offer a compatible option.
 - Copy the `slug` verbatim. Names mislead: Nano Banana 2 is `imagen-nano-banana-2-flash`, while `imagen-nano-banana-2` is Nano Banana Pro.
 - Skip entries marked `private: true` unless the user named that model or a Magnific tool description recommends it for the job. If the server refuses it, fall back to the next recommended model and say so.
 - Accounts do not all have the same tools and models: some are still rolling out, and plans and organizations switch some off.
