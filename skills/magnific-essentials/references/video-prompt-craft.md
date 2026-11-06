@@ -20,7 +20,7 @@ Model limits change: `video_models_list` is the truth when it differs from this 
 
 | Job | Good first choice | Why |
 |---|---|---|
-| Default footage, including social video and b-roll | `bytedance-seedance-pro-2.5` (catalog `sota`, rank 1) | Best realism, motion and native audio; 4-30 s; up to 6 shots in one call |
+| Default footage, including social video and b-roll | Compatible public model recommended for quality by the live catalog | Follow current `agentRecommendation` and supported capabilities |
 | Explicit speed or budget priority with Seedance controls | `bytedance-seedance-fast-2.0` (720p, 480p) | Fast drafts with native audio and references |
 | Explicit budget priority for silent clips and start/end frames | `kling-25`, `kling-30` | Compare current costs with `simulate_cost` |
 | Cheapest motion and staging drafts | `minimax-video-3_0-max-turbo` (480p, 768p) | Blocking, timing and animatics |
@@ -29,7 +29,7 @@ Model limits change: `video_models_list` is the truth when it differs from this 
 | Designed motion graphics, kinetic type, logo stings | `video-motion-1` when the catalog lists it for the user | Authored as code, frame-exact; not footage |
 
 Read `agentRecommendation` in the catalog for the current ranking; it moves as models ship.
-Use only available models and supported inputs. Follow the fallback rules in `magnific-essentials` when the default cannot handle the job.
+Use only available models and supported inputs. Follow the fallback rules in `magnific-essentials` when the preferred route cannot handle the job.
 
 ## 2. Fit the call to the model
 
@@ -37,7 +37,8 @@ Use only available models and supported inputs. Follow the fallback rules in `ma
   Leave out any field the entry does not list (`cameraMotion`, `looks`, `negativePrompt`, `noMusic`, `fps`, `multi_prompt`).
 - Duration limits differ: Seedance 2.5 4-30 s; Seedance 2.0 family 4-15 s; Kling 3.0 3-15 s; Kling 2.5 and 2.6 5 or 10 s; Veo 3.1 4, 6 or 8 s; MiniMax H3 Max 5-15 s.
 - Aspect ratios differ: Kling and Veo offer only 16:9, 9:16 (and Kling 1:1); no video model offers 4:5 (Seedance offers 3:4).
-- Follow `magnific-essentials` for model and resolution priority: honor explicit choices, otherwise prefer compatible Seedance 2.5 at 1080p.
+- Follow `magnific-essentials` for model and resolution priority: honor explicit choices, otherwise prefer quality using the live catalog’s `agentRecommendation`.
+  Select a compatible public model and supported resolution for the requested deliverable.
   Use lower resolution for explicit budget, speed, draft or preview needs, or a reported capability fallback.
 
 ## 3. The universal prompt

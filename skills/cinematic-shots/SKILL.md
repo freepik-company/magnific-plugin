@@ -25,13 +25,13 @@ Read [video-prompt-craft.md](../magnific-essentials/references/video-prompt-craf
 
 | Shot | Model | Resolution |
 |---|---|---|
-| Default footage, including social video, b-roll, dialogue and hero shots | `bytedance-seedance-pro-2.5` | 1080p for the final master |
-| Explicitly requested draft or preview, with someone to review takes | same model | `Draft`; `video_finalize_draft` renders the approved take at 1080p, at more than a direct render costs (see `magnific-essentials`) |
+| Default footage, including social video, b-roll, dialogue and hero shots | Compatible public model recommended for quality by the live catalog | Supported resolution guided by the live recommendation and deliverable |
+| Explicitly requested draft or preview, with someone to review takes | Compatible recommended model from the live catalog | Supported draft or preview resolution; see `magnific-essentials` for finalization costs |
 | Explicit budget or speed priority | Compatible recommended model from the live catalog, priced for the requested inputs | Supported resolution that meets the explicit priority and budget |
 | Animatic, motion test, timing check | `minimax-video-3_0-max-turbo` | 480p or 768p |
 | Keep real footage's motion, change the subject or look | A motion-transfer model when `video_models_list` lists one, otherwise `video_modify` | per catalog |
 
-Follow the model and resolution priority in `magnific-essentials`: explicit choices first, then compatible defaults, then a reported fallback.
+Follow the model and resolution priority in `magnific-essentials`: explicit choices first, then compatible live recommendations, then a reported fallback.
 Read `video_models_list` before deciding: recommendations change, and private entries are not for general use.
 Price with `simulate_cost` before every shot, and price the whole list against any budget the user gave before generating the first clip.
 Model and resolution change the price many times over, so price each combination you are weighing.

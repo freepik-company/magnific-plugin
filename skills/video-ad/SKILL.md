@@ -44,13 +44,14 @@ Inside any move that turns the product, add a guard: "during the move the label,
 
 - Price the plan with `simulate_cost` (one shot, times the number of shots) and compare it with the budget before anything else.
 - Follow `magnific-essentials` for model and resolution priority, explicit choices and capability fallbacks.
-  Default to available, compatible Seedance 2.5 at 1080p, including Reels, TikTok and Shorts.
+  Prefer quality using the live catalog’s `agentRecommendation`, including for Reels, TikTok and Shorts.
+  Choose a compatible public model and supported resolution for the requested deliverable.
   A social placement or a new brief alone does not justify a cheaper model or lower resolution.
 - Use cheaper models or lower resolution when the user requests a budget, speed, drafts or previews.
   For a draft workflow, choose a compatible recommended model from the live catalog and review motion and product fidelity before paying for finals.
 - Seedance 2.5 `Draft` previews the exact take; `video_finalize_draft` renders that take at 1080p, billed like a 1080p render.
   Draft plus finalize costs more than a direct final. Use it when someone will review drafts before selecting finals.
-- With a budget, leave room to fix the worst shot. Compare live quotes for compatible alternatives if the default exceeds that budget.
+- With a budget, leave room to fix the worst shot. Compare live quotes for compatible alternatives if the preferred route exceeds that budget.
 - With a budget, run drafts and finals inside it without stopping. Without one, follow the spend rule in `magnific-essentials`: quote the plan and wait for a yes before spending more than about 200 credits.
 - Start at most a few video jobs at a time; the account has a concurrency cap, and a rejected call tells you how long to wait. Never fire the same paid call twice; wait for the first.
 

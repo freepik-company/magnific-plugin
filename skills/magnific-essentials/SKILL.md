@@ -18,7 +18,7 @@ These rules prevent all five, and every job skill builds on them.
   For a batch, price one item and multiply.
 - Video is where money goes: duration, resolution and the model multiply the price, and one top-model clip at 1080p can cost more than a hundred images. Never quote a price from memory; `simulate_cost` is the only source.
 - With a budget from the user, stay inside it and report spend against it.
-- Without a budget, use the video defaults in section 3. For other media, choose the most cost-effective route that meets the deliverable's quality bar.
+- Without a budget, use the video selection rules in section 3. For other media, choose the most cost-effective route that meets the deliverable's quality bar.
   Price the selected route before applying the approval rules below.
   If the whole job costs about 200 credits or less, make the deliverable and report the cost.
   Above that, state the plan and its price, and wait for the user's yes before the first paid call; once they agree, run the plan without asking again, but stop and ask if it would go over the price they approved.
@@ -46,10 +46,11 @@ Render the requested deliverable directly unless the user wants drafts, previews
 - Read `images_models_list` or `video_models_list` before choosing (use `onlyRecommended: true` or `search` to keep it short), unless the user named a model; then find that exact model with `search`.
 - Follow `agentRecommendation` (`tier`, `rank`, `useFor`, `summary`): Magnific maintains it, and it beats general knowledge about which model fits which job.
 - For generated video, honor an explicit model and resolution first.
-  Otherwise, prefer `bytedance-seedance-pro-2.5` at 1080p when the live catalog lists it and it supports the requested inputs and output.
-  This default includes social video, b-roll and inserts; those labels alone do not imply a budget or draft request.
+  Otherwise, prefer quality using the live catalog’s `agentRecommendation` and select a public model that supports the requested inputs and output.
+  Choose a supported resolution using that recommendation and the requested deliverable; do not assume a fixed model or resolution.
+  This quality priority includes social video, b-roll and inserts; those labels alone do not imply a budget or draft request.
   Choose cheaper models or lower resolution when the user requests a budget, speed, drafts or previews.
-  If the default is unavailable or incompatible, choose the highest-ranked public recommendation that supports the job, and report the fallback.
+  If the preferred model or resolution is unavailable or incompatible, choose the highest-ranked public recommendation that supports the job, and report the fallback.
   Use only resolutions listed for the selected model. If an explicit user choice is unsupported, explain and offer a compatible option.
 - Copy the `slug` verbatim. Names mislead: Nano Banana 2 is `imagen-nano-banana-2-flash`, while `imagen-nano-banana-2` is Nano Banana Pro.
 - Skip entries marked `private: true` unless the user named that model or a Magnific tool description recommends it for the job. If the server refuses it, fall back to the next recommended model and say so.
