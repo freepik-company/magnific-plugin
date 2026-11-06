@@ -17,7 +17,7 @@ These rules prevent all five, and every job skill builds on them.
 - Price every video call, and any other call or batch that could cost more than about 200 credits, with `simulate_cost`, passing the target `tool` and the exact `arguments` you will send.
   For a batch, price one item and multiply.
 - Video is where money goes: duration, resolution and the model multiply the price, and one top-model clip at 1080p can cost more than a hundred images. Never quote a price from memory; `simulate_cost` is the only source.
-- With a budget from the user, stay inside it and report spend against it.
+- With a budget from the user, stay inside it and report spend against it, using the video selection rules in section 3.
 - Without a budget, use the video selection rules in section 3. For other media, choose the most cost-effective route that meets the deliverable's quality bar.
   Price the selected route before applying the approval rules below.
   If the whole job costs about 200 credits or less, make the deliverable and report the cost.
@@ -49,7 +49,8 @@ Render the requested deliverable directly unless the user wants drafts, previews
   Otherwise, prefer quality using the live catalog’s `agentRecommendation` and select a public model that supports the requested inputs and output.
   Choose a supported resolution using that recommendation and the requested deliverable; do not assume a fixed model or resolution.
   This quality priority includes social video, b-roll and inserts; those labels alone do not imply a budget or draft request.
-  Choose cheaper models or lower resolution when the user requests a budget, speed, drafts or previews.
+  Choose cheaper models or lower resolution for an explicit budget or speed priority, or when the user requests drafts or previews.
+  A spending cap without that priority keeps this quality route when its price fits. Compare cheaper alternatives only when the quality route exceeds the cap.
   If the preferred model or resolution is unavailable or incompatible, choose the highest-ranked public recommendation that supports the job, and report the fallback.
   Use only resolutions listed for the selected model. If an explicit user choice is unsupported, explain and offer a compatible option.
 - Copy the `slug` verbatim. Names mislead: Nano Banana 2 is `imagen-nano-banana-2-flash`, while `imagen-nano-banana-2` is Nano Banana Pro.

@@ -19,7 +19,7 @@ Settle these from the request, and state the ones you had to assume:
 - Length and shot count: 6, 10, 15 or 30 seconds; roughly one shot per 3 to 5 seconds.
 - Product source: a packshot creation, a saved library product (`library_list`), or the user's file to upload.
 - Sound: music, voiceover, on-camera dialogue, sound effects, or silence.
-- Budget, and the project to save into.
+- Budget when the user stated a spending cap, and the project to save into.
 - The end card: where the logo and the call to action go. Leave clean negative space for them; let the editor add exact type and logos, because generated text and logos are unreliable.
   In 9:16 for Reels, TikTok and Shorts, put that space in the upper or middle third: the platform's captions and buttons cover the bottom fifth of the frame.
 
@@ -42,13 +42,13 @@ Inside any move that turns the product, add a guard: "during the move the label,
 
 ## 4. Choose quality, then render
 
-- Price the plan with `simulate_cost` (one shot, times the number of shots) and compare it with the budget before anything else.
 - Follow `magnific-essentials` for model and resolution priority, explicit choices and capability fallbacks.
   Prefer quality using the live catalog’s `agentRecommendation`, including for Reels, TikTok and Shorts.
   Choose a compatible public model and supported resolution for the requested deliverable.
   A social placement or a new brief alone does not justify a cheaper model or lower resolution.
-- Use cheaper models or lower resolution when the user requests a budget, speed, drafts or previews.
+- Use cheaper models or lower resolution for an explicit budget or speed priority, or when the user requests drafts or previews.
   For a draft workflow, choose a compatible recommended model from the live catalog and review motion and product fidelity before paying for finals.
+- Price that plan with `simulate_cost` (one shot, times the number of shots) before rendering.
 - Seedance 2.5 `Draft` previews the exact take; `video_finalize_draft` renders that take at 1080p, billed like a 1080p render.
   Draft plus finalize costs more than a direct final. Use it when someone will review drafts before selecting finals.
 - With a budget, leave room to fix the worst shot. Compare live quotes for compatible alternatives if the preferred route exceeds that budget.
